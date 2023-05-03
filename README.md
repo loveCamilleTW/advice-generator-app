@@ -4,4 +4,4 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ## Links
 
-- Live Site URL: [https://advice-generator-app-lovecamilletw.vercel.app/](https://advice-generator-app-lovecamilletw.vercel.app/)
+- Live Site URL: [https://lovecamilletw.github.io/advice-generator-app/](https://lovecamilletw.github.io/advice-generator-app/)
