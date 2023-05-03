@@ -26,7 +26,7 @@ function App() {
 }
 
 function Divider() {
-  return <img className="divider" src={DIVIDER_DESKTOP} />;
+  return <img className="divider" src={DIVIDER_DESKTOP} alt="divider" />;
 }
 
 interface DiceButtonProps {
