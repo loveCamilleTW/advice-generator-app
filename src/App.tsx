@@ -13,10 +13,10 @@ function App() {
     <main>
       <div className="card">
         <h1>ADVICE # {advice.id}</h1>
-        <p>{advice.advice}</p>
+        <p>{`“${advice.advice}”`}</p>
         <Divider />
-        <DiceButton />
       </div>
+      <DiceButton />
     </main>
   );
 }
@@ -27,7 +27,7 @@ function Divider() {
 
 function DiceButton() {
   return (
-    <button>
+    <button className="dice">
       <img src={ICON_DICE} alt="icon dice" />
     </button>
   );

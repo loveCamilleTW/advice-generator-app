@@ -20,16 +20,46 @@ main {
 
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
-}
-
-.card {
-  background-color: var(--dark-grayish-blue);
+  font-size: 28px;
 }
 
 h1 {
   color: var(--neon-green);
+  text-align: center;
+  font-size: 0.5rem;
+  letter-spacing: 0.25rem;
 }
 
 p {
   color: var(--light-cyan);
+  text-align: center;
+}
+
+.card {
+  background-color: var(--dark-grayish-blue);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 40rem;
+  padding: 2rem;
+}
+
+.dice {
+  background-color: var(--neon-green);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  border: 0;
+}
+
+.dice > img {
+  color: var(--dark-blue);
+}
+
+.dice:hover {
+  box-shadow: 0 0 40px var(--neon-green);
+  cursor: pointer;
 }
