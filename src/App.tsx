@@ -1,13 +1,18 @@
 import ICON_DICE from "./images/icon-dice.svg";
 import DIVIDER_DESKTOP from "./images/pattern-divider-desktop.svg";
 // import DIVIDER_MOBILE from './images/pattern-divider-mobile.svg';
+import { useAdvice } from "./fetchHooks";
 
 function App() {
+  const { data: advice } = useAdvice();
+
+  if (!advice) return null;
+
   return (
     <main>
       <div className="card">
-        <h1>ADVICE # 1</h1>
-        <p>quote</p>
+        <h1>ADVICE # {advice.id}</h1>
+        <p>{advice.advice}</p>
         <Divider />
         <DiceButton />
       </div>
