@@ -2,6 +2,7 @@ import ICON_DICE from "./images/icon-dice.svg";
 import DIVIDER_DESKTOP from "./images/pattern-divider-desktop.svg";
 // import DIVIDER_MOBILE from './images/pattern-divider-mobile.svg';
 import { useAdvice } from "./fetchHooks";
+import "./App.css";
 
 function App() {
   const { data: advice } = useAdvice();
