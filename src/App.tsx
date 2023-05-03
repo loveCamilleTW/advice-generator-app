@@ -22,7 +22,7 @@ function App() {
 }
 
 function Divider() {
-  return <img src={DIVIDER_DESKTOP} />;
+  return <img className="divider" src={DIVIDER_DESKTOP} />;
 }
 
 function DiceButton() {
