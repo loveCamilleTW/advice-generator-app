@@ -5,9 +5,13 @@ import { useAdvice } from "./fetchHooks";
 import "./App.css";
 
 function App() {
-  const { data: advice } = useAdvice();
+  const { data: advice, refetch } = useAdvice();
 
   if (!advice) return null;
+
+  const handleButtonClick = () => {
+    refetch();
+  };
 
   return (
     <main>
@@ -16,7 +20,7 @@ function App() {
         <p>{`“${advice.advice}”`}</p>
         <Divider />
       </div>
-      <DiceButton />
+      <DiceButton onClick={handleButtonClick} />
     </main>
   );
 }
@@ -25,9 +29,15 @@ function Divider() {
   return <img className="divider" src={DIVIDER_DESKTOP} />;
 }
 
-function DiceButton() {
+interface DiceButtonProps {
+  onClick: () => void;
+}
+
+function DiceButton(props: DiceButtonProps) {
+  const { onClick } = props;
+
   return (
-    <button className="dice">
+    <button onClick={onClick} className="dice">
       <img src={ICON_DICE} alt="icon dice" />
     </button>
   );
